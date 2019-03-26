@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.kunrui.kunrui"
+        minSdkVersion 21
+        targetSdkVersion 19
+        versionCode 2
+        versionName "2.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res/layout/activityView5.7',
+                            'src/main/res/layout/activityPad10.1',
+                            'src/main/res/layout/alertView5.7',
+                            'src/main/res/layout/alertView10.1',
+                            'src/main/res/layout/extendsView',
+                            'src/main/res/layout/noUsedView',
+                            'src/main/res/layout/resourceChangeView',
+                            'src/main/res/layout',
+                            'src/main/res'
+                    ]
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.hynnet:jxl:2.6.12.1'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleDependency,GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0-beta01'
+    //noinspection GradleDependency
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation  'com.android.support:percent:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //noinspection GradleDependency
+    implementation 'com.android.support:design:28.0.0-beta01'
+
+    //UiAutomator 2
+    androidTestImplementation 'com.android.support.test.uiautomator:uiautomator-v18:2.1.3'
+}

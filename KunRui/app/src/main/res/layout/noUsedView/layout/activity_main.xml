@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.example.kunrui.kunrui.Resource.BackgroundView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <include layout="@layout/activity_title"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="100%"/>
+
+    <Button
+        android:id="@+id/connect"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="7%"
+        app:layout_widthPercent="20%"
+        app:layout_marginLeftPercent="2%"
+        app:layout_marginTopPercent="21%"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ripple_bg"
+        android:text="@string/connect"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:background="@drawable/ripple_bg"
+        android:id="@+id/clear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="7%"
+        app:layout_widthPercent="20%"
+        app:layout_marginLeftPercent="5%"
+        android:layout_alignTop="@+id/connect"
+        android:layout_toEndOf="@+id/close"
+        android:text="@string/clear"
+        tools:ignore="RelativeOverlap,RtlHardcoded" />
+
+    <Button
+        android:background="@drawable/ripple_bg"
+        android:id="@+id/close"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="7%"
+        app:layout_widthPercent="20%"
+        app:layout_marginLeftPercent="5%"
+        android:layout_alignTop="@+id/connect"
+        android:layout_toEndOf="@+id/connect"
+        android:text="@string/close"
+        tools:ignore="RelativeOverlap,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/Scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/connect"
+        android:layout_toEndOf="@+id/clear"
+        android:background="@drawable/ripple_bg"
+        android:text="@string/startScroll"
+        app:layout_heightPercent="7%"
+        app:layout_marginLeftPercent="5%"
+        app:layout_widthPercent="20%"
+        tools:ignore="RelativeOverlap,RtlHardcoded" />
+
+    <TableRow
+        android:id="@+id/TableTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/connect"
+        android:background="@color/colorGray"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_marginLeftPercent="3%"
+        app:layout_marginRightPercent="3%"
+        tools:ignore="ObsoleteLayoutParam,RtlHardcoded">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tableTitle"
+            android:layout_marginLeft="7dp"
+            android:gravity="center_horizontal"
+            android:text="@string/id"
+            tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+        <TextView
+            android:layout_width="111dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tableTitle"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_horizontal"
+            android:text="@string/IMSI"
+            tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tableTitle"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_horizontal"
+            android:text="@string/QCC"
+            tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+        <TextView
+            android:layout_width="111dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tableTitle"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_horizontal"
+            android:text="@string/captureTime"
+            tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+    </TableRow>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/TableTitle"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="start"
+        android:fadeScrollbars="true"
+        android:maxLines="1000"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical"
+        android:visibility="invisible"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="96%">
+
+        <TableRow
+            android:id="@+id/TableRow"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/connect"
+            tools:ignore="ObsoleteLayoutParam">
+
+            <TextView
+                android:id="@+id/id"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tableTitle"
+                android:gravity="center_horizontal"
+                android:textSize="12sp"
+                tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/imsi"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:gravity="center_horizontal"
+                android:textSize="12sp"
+                tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/qcc"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:gravity="center_horizontal"
+                android:textSize="12sp"
+                tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/cptTime"
+                android:layout_width="111dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:gravity="center_horizontal"
+                android:textSize="12sp"
+                tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+        </TableRow>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollMsg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/TableTitle"
+        android:layout_centerHorizontal="true"
+        android:fadeScrollbars="true"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="96%">
+
+        <TableRow
+            android:id="@+id/tableRow"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/connect"
+            tools:ignore="ObsoleteLayoutParam,RtlHardcoded">
+
+            <TextView
+                android:id="@+id/Id"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tableTitle"
+                android:gravity="center_horizontal"
+                android:textSize="12sp"
+                tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/Imsi"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_horizontal"
+                android:textSize="12sp"
+                tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/Qcc"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:gravity="center_horizontal"
+                android:textSize="12sp"
+                tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/CptTime"
+                android:layout_width="111dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:gravity="center_horizontal"
+                android:textSize="12sp"
+                tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+        </TableRow>
+    </ScrollView>
+
+
+    <Button
+        android:background="@drawable/ripple_bg"
+        android:id="@+id/realTimeFlow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/scrollView"
+        android:layout_marginStart="55dp"
+        android:text="@string/realTimeFlow"
+        android:textSize="16sp" />
+
+    <Button
+        android:background="@drawable/ripple_bg"
+        android:id="@+id/winningRunningWater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/scrollView"
+        android:layout_marginEnd="75dp"
+        android:text="@string/winningRunningWater"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/powerChart"
+        android:layout_width="101dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/ripple_bg"
+        android:text="@string/powerChart" />
+
+    <Spinner
+        android:id="@+id/freSelect"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="8%"
+        app:layout_widthPercent="45%"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/TableTitle"
+        app:layout_marginTopPercent="13%" />
+
+    <Spinner
+        android:id="@+id/bandSet"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_marginLeftPercent="4%"
+        app:layout_heightPercent="8%"
+        app:layout_widthPercent="20%"
+        android:layout_toEndOf="@+id/freSelect"
+        app:layout_marginTopPercent="13%" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/realTimeFlow"
+        android:text="@string/EARFCN" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView3"
+        android:text="@string/PCI" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView4"
+        android:layout_below="@+id/textView"
+        android:text="@string/down" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/realTimeFlow"
+        android:layout_marginStart="68dp"
+        android:text="@string/up" />
+
+
+    <EditText
+        android:id="@+id/ulfreq"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignStart="@+id/dlfreq"
+        android:layout_below="@+id/realTimeFlow"
+        android:background="@null"
+        android:hint="0-65535"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/dlfreq"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_marginStart="131dp"
+        android:background="@null"
+        android:hint="0-65535"
+        android:text=""
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/pci"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_alignTop="@+id/textView2"
+        android:background="@null"
+        android:hint="0-504"
+        android:text=""
+        tools:ignore="LabelFor" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/realTimeFlow"
+        android:layout_marginStart="0dp"
+        android:background="#08e158" />
+
+    <View
+        android:layout_width="386dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/scrollView"
+        android:layout_centerHorizontal="true"
+        android:background="#08e158" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignBottom="@+id/bandSet"
+        android:layout_toEndOf="@+id/bandSet"
+        android:background="@drawable/ripple_bg"
+        android:text="@string/reset"
+        app:layout_marginLeftPercent="5%"
+        app:layout_marginTopPercent="13%"
+        app:layout_widthPercent="20%" />
+</android.support.percent.PercentRelativeLayout>

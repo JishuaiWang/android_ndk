@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.example.kunrui.kunrui.Resource.BackgroundView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <include layout="@layout/title"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="100%"/>
+
+    <Button
+        android:background="@drawable/ripple_bg"
+        android:id="@+id/add"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="8%"
+        app:layout_widthPercent="21%"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/add"
+        app:layout_marginLeftPercent="2%"
+        app:layout_marginBottomPercent="2%"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <Button
+        android:background="@drawable/ripple_bg"
+        android:id="@+id/delete"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="8%"
+        app:layout_widthPercent="21%"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/edit"
+        android:text="@string/delete"
+        app:layout_marginBottomPercent="2%"
+        app:layout_marginLeftPercent="5%"
+        tools:ignore="HardcodedText,RelativeOverlap,RtlHardcoded" />
+
+    <Button
+        android:background="@drawable/ripple_bg"
+        android:id="@+id/edit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="8%"
+        app:layout_widthPercent="21%"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/export"
+        android:text="@string/edit"
+        app:layout_marginBottomPercent="2%"
+        app:layout_marginLeftPercent="5%"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/export"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/add"
+        android:background="@drawable/ripple_bg"
+        android:text="@string/export"
+        app:layout_heightPercent="8%"
+        app:layout_widthPercent="21%"
+        app:layout_marginBottomPercent="2%"
+        app:layout_marginLeftPercent="5%"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <ScrollView
+        android:id="@+id/msgScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="75%"
+        app:layout_widthPercent="95%"
+        android:layout_above="@id/add"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="74dp"
+        android:fadeScrollbars="false"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical"
+        android:typeface="monospace">
+
+        <LinearLayout
+            android:id="@+id/blackList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:orientation="vertical"
+            android:typeface="monospace"
+            tools:ignore="ScrollViewSize" />
+    </ScrollView>
+</android.support.percent.PercentRelativeLayout>

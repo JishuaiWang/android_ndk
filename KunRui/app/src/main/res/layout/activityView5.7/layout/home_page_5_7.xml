@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homePage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_tt"
+    android:screenOrientation="portrait"
+    tools:context=".HomePage">
+
+    <include layout="@layout/activity_title"
+        android:id="@+id/startScan"
+        android:visibility="gone"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="100%"/>
+
+    <Button
+        android:id="@+id/connectStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_marginTopPercent="32%"
+        android:background="@null"
+        android:elevation="10dp"
+        android:text="@string/starConnect"
+        android:textColor="#00ce41"
+        android:textSize="88sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/ivGif"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/connectStart"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/loading"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/id_homePage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="10%"
+        android:layout_below="@+id/startScan"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:text="@string/id"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/imsi_homePage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="16%"
+        app:layout_marginLeftPercent="10%"
+        android:layout_below="@+id/startScan"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:text="@string/IMSI"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/cptTime_homepage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="22%"
+        app:layout_marginLeftPercent="26%"
+        android:layout_below="@+id/startScan"
+        android:gravity="center"
+        android:text="@string/captureTime"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/Qcc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="17%"
+        app:layout_marginLeftPercent="47%"
+        android:layout_below="@+id/startScan"
+        android:gravity="center"
+        android:text="@string/QCC"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/RSSI"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="11%"
+        app:layout_marginLeftPercent="65%"
+        android:layout_below="@+id/startScan"
+        android:gravity="center"
+        android:text="@string/RSSI"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/remark_homepage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="25%"
+        app:layout_marginLeftPercent="76%"
+        android:layout_below="@+id/startScan"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:text="@string/remark"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+    <ScrollView
+        android:id="@+id/msgScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="65%"
+        app:layout_widthPercent="100%"
+        app:layout_marginTopPercent="20%"
+        android:layout_above="@id/add"
+        android:fadeScrollbars="false"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical"
+        android:visibility="gone"
+        android:typeface="monospace">
+
+        <LinearLayout
+            android:id="@+id/TableLayout"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:orientation="vertical"
+            android:typeface="monospace"
+            tools:ignore="ScrollViewSize" />
+    </ScrollView>
+
+    <Button
+        android:visibility="gone"
+        android:textSize="25sp"
+        android:id="@+id/positionImsi"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        app:layout_marginTopPercent="87%"
+        app:layout_marginLeftPercent="50%"
+        android:background="@drawable/circle"
+        android:layout_centerHorizontal="true"
+        android:text="@string/position" />
+
+    <Button
+        android:textSize="25sp"
+        android:id="@+id/whiteList"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_marginTopPercent="87%"
+        app:layout_marginLeftPercent="50%"
+        android:background="@drawable/circle"
+        android:layout_centerHorizontal="true"
+        android:text="@string/whiteEdit" />
+
+    <Button
+        android:id="@+id/arrowScroll"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/arrow"
+        android:text="" />
+
+    <Switch
+        android:id="@+id/poll_exc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="53dp"
+        android:layout_marginTop="44dp"
+        android:switchMinWidth="20dp"
+        android:showText="true"
+        android:textOff="off"
+        android:textOn="on"
+        android:textSize="25sp"
+        android:text="@string/poll_off"
+        android:textColor="#33da33"
+        android:thumb="@drawable/thumb"
+        android:track="@drawable/track" />
+
+</android.support.percent.PercentRelativeLayout>

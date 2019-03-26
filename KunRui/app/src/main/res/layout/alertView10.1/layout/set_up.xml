@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="left"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/fdd"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginStart="400dp"
+        android:background="@null"
+        android:text="@string/fdd"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/tdd"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="33dp"
+        android:layout_marginStart="100dp"
+        android:background="@null"
+        android:text="@string/tdd"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/bandMsgFdd"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="88dp"
+        android:layout_marginStart="450dp"
+        android:gravity="left"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/bandMsgTdd"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="88dp"
+        android:layout_marginStart="150dp"
+        android:gravity="left"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="350dp"
+        android:gravity="left"
+        android:text="@string/band"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="50dp"
+        android:gravity="left"
+        android:text="@string/band"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="160dp"
+        android:layout_marginStart="350dp"
+        android:gravity="left"
+        android:text="@string/ulfreq"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="160dp"
+        android:gravity="left"
+        android:text="@string/ulfreq"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="220dp"
+        android:gravity="left"
+        android:text="@string/dlfreq"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="220dp"
+        android:layout_marginStart="350dp"
+        android:gravity="left"
+        android:text="@string/dlfreq"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/dlfreqTdd"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="208dp"
+        android:layout_marginStart="146dp"
+        android:gravity="left"
+        android:textSize="18sp"
+        android:text=""
+        />
+
+    <EditText
+        android:id="@+id/dlfreqFdd"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="208dp"
+        android:layout_marginStart="446dp"
+        android:gravity="left"
+        android:textSize="18sp"
+        android:text=""
+        />
+
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="280dp"
+        android:layout_marginStart="350dp"
+        android:gravity="left"
+        android:text="@string/pci"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="280dp"
+        android:gravity="left"
+        android:text="@string/pci"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/pciTdd"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="268dp"
+        android:layout_marginStart="146dp"
+        android:gravity="left"
+        android:textSize="18sp"
+        android:text=""
+        />
+
+    <EditText
+        android:id="@+id/pciFdd"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="268dp"
+        android:layout_marginStart="446dp"
+        android:gravity="left"
+        android:textSize="18sp"
+        android:text=""
+        />
+
+    <EditText
+        android:id="@+id/ulfreqTdd"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="148dp"
+        android:layout_marginStart="146dp"
+        android:gravity="left"
+        android:text=""
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/ulfreqFdd"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="148dp"
+        android:layout_marginStart="446dp"
+        android:gravity="left"
+        android:text=""
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="550dp"
+        android:textSize="18sp"
+        android:text="" />
+</RelativeLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.kunrui.kunrui.Resource.BackgroundView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <include layout="@layout/title"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="100%"/>
+
+    <ScrollView
+        android:id="@+id/scrollMsg"
+        android:layout_width="403dp"
+        android:layout_height="335dp"
+        app:layout_heightPercent="60%"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/TableTitle"
+        android:layout_marginTop="2dp"
+        android:fadeScrollbars="true"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical"
+        tools:ignore="ObsoleteLayoutParam">
+
+        <TableRow
+            android:id="@+id/tableRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            tools:ignore="ObsoleteLayoutParam">
+
+            <TextView
+                android:id="@+id/Id"
+                android:layout_width="34dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tableTitle"
+                android:layout_marginLeft="7dp"
+                android:gravity="center_horizontal"
+                android:textSize="9sp"
+                tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/Imsi"
+                android:layout_width="111dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tableTitle"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_horizontal"
+                android:textSize="9sp"
+                tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/Qcc"
+                android:layout_width="63dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tableTitle"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_horizontal"
+                android:textSize="9sp"
+                tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/CptTime"
+                android:layout_width="148dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tableTitle"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_horizontal"
+                android:textSize="9sp"
+                tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+        </TableRow>
+    </ScrollView>
+    <TableRow
+        android:id="@+id/TableTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="83dp"
+        tools:ignore="ObsoleteLayoutParam,RtlHardcoded">
+
+        <TextView
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tableTitle"
+            android:layout_marginLeft="7dp"
+            android:gravity="center_horizontal"
+            android:text="@string/id"
+            android:textSize="20sp"
+            tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+        <TextView
+            android:layout_width="111dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tableTitle"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_horizontal"
+            android:text="@string/IMSI"
+            android:textSize="20sp"
+            tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+        <TextView
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tableTitle"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_horizontal"
+            android:text="@string/QCC"
+            android:textSize="20sp"
+            tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+        <TextView
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tableTitle"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_horizontal"
+            android:text="@string/captureTime"
+            android:textSize="20sp"
+            tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/strLastTime"
+        android:layout_toEndOf="@+id/startTime"
+        android:background="@drawable/ripple_bg"
+        android:text="@string/refresh"
+        app:layout_marginLeftPercent="2%"/>
+
+    <TextView
+        android:id="@+id/strBeginTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="24%"
+        app:layout_marginLeftPercent="3%"
+        app:layout_marginTopPercent="81%"
+        android:layout_alignParentStart="true"
+        android:text="@string/beginTime"
+        android:gravity="center"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/startTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="6%"
+        app:layout_widthPercent="45%"
+        android:layout_alignTop="@+id/strBeginTime"
+        android:layout_toEndOf="@+id/strBeginTime"
+        android:text=""
+        android:gravity="center"
+        app:layout_marginLeftPercent="0%"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/strBeginTime"
+        android:layout_toEndOf="@+id/startTime"
+        android:background="@drawable/ripple_bg"
+        android:text="@string/select"
+        app:layout_marginLeftPercent="2%"/>
+
+    <TextView
+        android:id="@+id/lastTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="6%"
+        app:layout_widthPercent="45%"
+        android:layout_alignTop="@+id/strLastTime"
+        android:layout_toEndOf="@+id/strLastTime"
+        android:text=""
+        android:gravity="center"
+        app:layout_marginLeftPercent="0%"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/strLastTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="24%"
+        app:layout_marginLeftPercent="3%"
+        app:layout_marginTopPercent="91%"
+        android:layout_alignParentStart="true"
+        android:text="@string/lastTime"
+        android:gravity="center"
+        android:textSize="20sp"/>
+
+</android.support.percent.PercentRelativeLayout>

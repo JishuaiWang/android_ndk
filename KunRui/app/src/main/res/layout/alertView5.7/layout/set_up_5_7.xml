@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="left"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessLeaf,UselessParent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize">
+
+            <Button
+                android:id="@+id/fdd"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="300dp"
+                android:background="@null"
+                android:text="@string/fdd"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/tdd"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="60dp"
+                android:background="@null"
+                android:text="@string/tdd"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/bandMsgFdd"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="48dp"
+                android:layout_marginStart="350dp"
+                android:gravity="left"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/bandMsgTdd"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="48dp"
+                android:layout_marginStart="120dp"
+                android:gravity="left"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="60dp"
+                android:layout_marginStart="250dp"
+                android:gravity="left"
+                android:text="@string/band"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="60dp"
+                android:layout_marginStart="10dp"
+                android:gravity="left"
+                android:text="@string/band"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="120dp"
+                android:layout_marginStart="250dp"
+                android:gravity="left"
+                android:text="@string/ulfreq"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="120dp"
+                android:gravity="left"
+                android:text="@string/ulfreq"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="180dp"
+                android:gravity="left"
+                android:text="@string/dlfreq"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="180dp"
+                android:layout_marginStart="250dp"
+                android:gravity="left"
+                android:text="@string/dlfreq"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/dlfreqTdd"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="168dp"
+                android:layout_marginStart="116dp"
+                android:gravity="left"
+                android:textSize="18sp"
+                android:text=""
+                />
+
+            <EditText
+                android:id="@+id/dlfreqFdd"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="168dp"
+                android:layout_marginStart="346dp"
+                android:gravity="left"
+                android:textSize="18sp"
+                android:text=""
+                />
+
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="240dp"
+                android:layout_marginStart="250dp"
+                android:gravity="left"
+                android:text="@string/pci"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="240dp"
+                android:gravity="left"
+                android:text="@string/pci"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/pciTdd"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="243dp"
+                android:layout_marginStart="116dp"
+                android:gravity="left"
+                android:textSize="18sp"
+                android:text=""
+                />
+
+            <EditText
+                android:id="@+id/pciFdd"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="243dp"
+                android:layout_marginStart="346dp"
+                android:gravity="left"
+                android:textSize="18sp"
+                android:text=""
+                />
+
+            <EditText
+                android:id="@+id/ulfreqTdd"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="108dp"
+                android:layout_marginStart="116dp"
+                android:gravity="left"
+                android:text=""
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/ulfreqFdd"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="108dp"
+                android:layout_marginStart="346dp"
+                android:gravity="left"
+                android:text=""
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
